@@ -23,13 +23,13 @@ app.use(express.json());
  */
 
 // 1. Búsqueda de todos los post publicados por orden cronológico (del más reciente al más antiguo)
-app.get("/posts", getPosts);
+app.get("/posts", getPostsByTime);
 
 // 2. Búsqueda del perfil de un usuario concreto con todos sus datos (nombre y correo electrónico?) y además un listado de todos sus posts
 app.get("/users/:id", getUserGallery);
 
 // 3. Búsqueda de post por un texto descriptivo dado como parámetro
-app.get("/posts/:whatever", getPostByDescription)
+app.get("/posts/:whatever", getPostByDescription);
 
 // 4. Inicio de sesión mediante nombre/email y contraseña
 app.post("/login", loginUser);
@@ -46,6 +46,11 @@ app.post("/users", createUser);
  * 
  */
 
+// 6. Publicar un post, que reciba una imágen (procesarla con sharp (con unas dimensiones y un tamaño máximo) y una descripción
+app.post("/posts", createPost);
+
+// 7. Publicar/Retirar un like de un post
+app.post("/posts/:id/like", togglePostLike);
 
 
 /**
