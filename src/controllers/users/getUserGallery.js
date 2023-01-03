@@ -1,7 +1,7 @@
 const { userIdSchema } = require("../../schemas/users");
 const {
     selectUserById,
-  } = require("../../repositories/posts");
+  } = require("../../repositories/users");
 const { generateError } = require("../../utils");
 
 const getUserGallery = async (req, res, next) => {

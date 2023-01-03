@@ -11,7 +11,8 @@ const express = require("express");
 
 const {
   loginUser,
-  createUser
+  createUser,
+  getUserGallery
 } = require("./controllers/users");
 
 /**
