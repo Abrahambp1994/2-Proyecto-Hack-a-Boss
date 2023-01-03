@@ -9,8 +9,8 @@ MÓDULOS A INSTALAR
 - sharp // para procesar las imágenes
 - jsonwebtoken // para generar las pulseritas de los users
 - express-fileupload // para poder subir imágenes
-- cors // para React
-- node-mailjet // para mandar la clave de acceso por correo
+- cors // para React NO
+- node-mailjet // para mandar la clave de acceso por correo NO
 - dotenv // para llamar al enviroment
 
 MÓDULOS A REQUERIR DE NODE
@@ -31,10 +31,10 @@ EXTRA!
 ENDPOINTS CONTROLLERS
 PÚBLICO
 
-- BÚSQUEDA (GET/posts) DE TODOS LOS POST PÚBLICADOS POR FECHA DE SUBIDA INVERSA*
+- BÚSQUEDA (GET/posts) DE TODOS LOS POST PÚBLICADOS POR FECHA DE SUBIDA INVERSA\*
 - BÚSQUEDA (GET/users/:texto) DEL PERFIL DE UN USUARIO CONCRETO QUE NOS MUESTRE SU GALERÍA DE FOTOS
 - BÚSQUETA (GET/posts/:texto) DE POSTS SEGÚN DESCRIPCIÓN
-    - Mirar bien como hacer búsquedas personalizadas desde el parámetro
+  - Mirar bien como hacer búsquedas personalizadas desde el parámetro
 - ACCESO (POST/login) DE USUARIOS REGISTRADOS A PARTIR DE SU CORREO Y CONTRASEÑA Y QUE NOS DEVUELVE SU TOKEN CORRESPONDIENTE
 - CREACIÓN (POST/users) DE USUARIO RECIBIENDO SUS DATOS: nombre de usuario, contraseña, email, extras: avatar, edad, biografía QUE NOS DEVUELVE UN CÓDIGO DE REGISTRO QUE MANDA AL MAIL
 

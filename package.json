@@ -1,5 +1,39 @@
 {
   "dependencies": {
-    "express": "^4.18.2"
-  }
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0"
+  },
+  "devDependencies": {
+    "bcrypt": "^5.1.0",
+    "joi": "^17.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "sharp": "^0.31.3",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "initDb": "node src/database/initDb.js",
+    "populateDb": "node src/database/populateDb.js"
+  },
+  "name": "2-proyecto-hack-a-boss",
+  "description": "TITULO App de fotos (clon de Instagram)",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abrahambp1994/2-Proyecto-Hack-a-Boss.git"
+  },
+  "keywords": [],
+  "author": "Fabio y Abri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abrahambp1994/2-Proyecto-Hack-a-Boss/issues"
+  },
+  "homepage": "https://github.com/Abrahambp1994/2-Proyecto-Hack-a-Boss#readme"
 }
