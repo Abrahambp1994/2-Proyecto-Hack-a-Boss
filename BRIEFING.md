@@ -6,7 +6,7 @@ MÓDULOS A INSTALAR
 - bcrypt // para encriptar passwords
 - uuid // para generar el código de confirmación de regristro del usuario
 - mysql2 // para generar tablas
-- sharp // para procesar las imágenes
+// sharp // para procesar las imágenes
 - jsonwebtoken // para generar las pulseritas de los users
 - express-fileupload // para poder subir imágenes
 - cors // para React
