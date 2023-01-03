@@ -41,7 +41,7 @@ app.use(express.json());
 /* app.get("/posts", getPostsByTime); */
 
 // 2. Búsqueda del perfil de un usuario concreto con todos sus datos (nombre y correo electrónico?) y además un listado de todos sus posts
-/* app.get("/users/:id", getUserGallery); */
+app.get("/users/:id", getUserGallery);
 
 // 3. Búsqueda de post por un texto descriptivo dado como parámetro
 /* app.get("/posts/:whatever", getPostByDescription); */
