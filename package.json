@@ -8,7 +8,9 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "initDb": "node src/database/initDb.js",
+    "populateDb": "node src/database/populateDb.js"
   },
   "repository": {
     "type": "git",

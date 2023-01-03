@@ -2,8 +2,6 @@ require("dotenv").config();
 const bcrypt = require("bcrypt");
 const getPool = require("./getPool");
 
-// Función que inserta datos de prueba en la DB
-
 const populateDb = async () => {
   try {
     const pool = getPool();

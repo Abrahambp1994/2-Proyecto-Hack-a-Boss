@@ -11,6 +11,7 @@ const express = require("express");
 
 const {
   loginUser,
+  createUser
 } = require("./controllers/users");
 
 /**
@@ -49,7 +50,7 @@ app.use(express.json());
 app.post("/login", loginUser);
 
 // 5. Registro a partir de nombre, email, contraseña
-/* app.post("/users", createUser); */
+app.post("/users", createUser);
 
 
 
