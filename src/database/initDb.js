@@ -31,7 +31,7 @@ const initDb = async () => {
         CREATE TABLE posts (
             id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
             image VARCHAR(100) NOT NULL,
-            description VARCHAR(5000) NOT NULL,
+            description VARCHAR(5000),
             userId INT UNSIGNED NOT NULL,
             FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE
         );
