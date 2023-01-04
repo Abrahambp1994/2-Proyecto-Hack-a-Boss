@@ -33,7 +33,8 @@ const initDb = async () => {
           image VARCHAR(100) NOT NULL,
           description VARCHAR(5000),
           userId INT UNSIGNED NOT NULL,
-          FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE
+          FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE,
+          dateCreation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
     `);
 
