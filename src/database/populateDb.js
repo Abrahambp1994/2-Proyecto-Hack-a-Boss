@@ -34,7 +34,7 @@ const populateDb = async () => {
     await pool.query(`
         INSERT INTO posts (image, description, userId) VALUES 
         ("", "Ruta por Gredos. Precioso día rodeado de amigos", 1),
-        ("", "Italia. Gran ciudad para disfrutar de sus monumentos", 2),
+        ("", "Italia. Gran país para disfrutar de sus monumentos", 2),
         ("", "Formigal. Bonito lugar para hacer deporte y disfrutar de la naturaleza", 3),
         ("", "Crucero por el Nilo. Impresionante viaje en barco", 4)
 
