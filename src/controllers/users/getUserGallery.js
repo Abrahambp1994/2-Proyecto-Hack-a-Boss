@@ -1,7 +1,10 @@
 const { userIdSchema } = require("../../schemas/users");
 const {
-    selectUserById,
+    selectUserById
   } = require("../../repositories/users");
+  const {
+    selectImagesFromUser
+  } = require("../../repositories/posts");
 const { generateError } = require("../../utils");
 
 const getUserGallery = async (req, res, next) => {
@@ -20,6 +23,12 @@ const getUserGallery = async (req, res, next) => {
         if (!user) {
             generateError("User doesn't exist", 404);
         }
+
+        // Seleccionamos los posts que tiene el user en la DB
+        const postImage = await selectImagesFromUser(id);
+
+        // Creamos una propiedad "images" en el objeto del user y guardamos en ella el array de imágenes recogidas de la DB
+        user.images = postImage;
 
         res.status(200).send({ status: "ok", data: user });
     } catch (error) {
