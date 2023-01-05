@@ -1,3 +1,4 @@
 const generateError = require("./generateError");
+const processAndSaveImage = require("./processAndSaveImage");
 
-module.exports = { generateError };
+module.exports = { generateError, processAndSaveImage };

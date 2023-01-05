@@ -1,5 +1,9 @@
-const selectImagesFromUser = require("./selectImagesFromUser");
+const selectPosts = require("./selectPosts");
+const insertPost = require("./insertPost");
+const insertPostImage = require("./insertPostImage");
 
 module.exports = {
-  selectImagesFromUser
+  selectPosts,
+  insertPost,
+  insertPostImage
 };

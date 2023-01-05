@@ -20,8 +20,7 @@ const initDb = async () => {
           id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
           email VARCHAR(100) UNIQUE NOT NULL,
           password VARCHAR(100) NOT NULL,
-          name VARCHAR(50) NOT NULL,
-          registrationCode VARCHAR(100)
+          name VARCHAR(50) NOT NULL
         );
     `);
 
@@ -34,7 +33,7 @@ const initDb = async () => {
           description VARCHAR(5000),
           userId INT UNSIGNED NOT NULL,
           FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE,
-          dateCreation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          creationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
     `);
 

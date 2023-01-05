@@ -20,11 +20,6 @@ const loginUser = async (req, res, next) => {
       generateError("Wrong email or password", 400);
     }
 
-    // Si existe el usuario, pero tiene un código de registro, lanzamos un error indicando que está sin activar
-    if (user.registrationCode) {
-      generateError("User not activated. Please, check your email", 400);
-    }
-
     // Comprobamos si la contraseña está bien. La password que viene en el body está sin encriptar, pero la de la base de datos (user.password) está encriptada, así que para compararlas hay que usar el método bcrypt.compare(). Si la pass está bien, nos devuelve true, si no, false
     const isPasswordOk = await bcrypt.compare(password, user.password);
 

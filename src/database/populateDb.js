@@ -15,14 +15,16 @@ const populateDb = async () => {
         "${await bcrypt.hash("123456",10)}",
          "Pepe"
         ),
-        ("maria@email.com", "${await bcrypt.hash(
-          "123456",
-          10
-        )}", "María"),
-        ("gonzalo@email.com", "${await bcrypt.hash(
-          "123456",
-          10
-        )}", "Gonzalo")
+        (
+        "maria@email.com",
+        "${await bcrypt.hash("123456",10)}",
+        "María"
+        ),
+        (
+        "gonzalo@email.com",
+        "${await bcrypt.hash("123456",10)}",
+        "Gonzalo"
+        )
     `);
 
     console.log("Inserting posts...");
@@ -31,17 +33,15 @@ const populateDb = async () => {
         INSERT INTO posts (image, description, userId) VALUES 
         ("o83f7gcbo3487bog.jpg", "Genial para salir de fiesta", 1),
         ("o83f7gcbo3487bog.jpg", "Es una ciudad muy chula, viaje inolvidable", 2),
-        ("o83f7gcbo3487bog.jpg", "Me gustó bastante, pero se nota demasiado estrés", 3)
+        ("o83f7gcbo3487bog.jpg", "Me gustó bastante, pero se nota demasiado estrés", 1)
     `);
-
-    /* console.log("Inserting likes...");
 
     await pool.query(`
         INSERT INTO likes (postId, userId) VALUES 
         (1, 2),
         (1, 3),
         (2, 1)
-    `); */
+    `);
 
     console.log("¡All done! 🚀");
   } catch (error) {
